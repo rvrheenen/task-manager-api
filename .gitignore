@@ -1,0 +1,8 @@
+# node stuff
+node_modules
+
+#config stuff
+config
+
+# mac stuff
+.DS_Store
