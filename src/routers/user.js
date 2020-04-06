@@ -32,7 +32,6 @@ router.post("/users/login", async (req, res) => {
         res.send({user, token})
 
     } catch(e) {
-        console.log(e)
         res.status(400).send(e)
     }
 })
@@ -62,7 +61,7 @@ router.post("/users/logoutAll", auth, async (req, res) => {
 // read own profile
 router.get("/users/me", auth, async (req, res) => {
     try {
-        res.status(201).send(req.user)
+        res.status(200).send(req.user)
     } catch(e) {
         res.status(400).send()
     }
@@ -95,7 +94,6 @@ router.delete("/users/me", auth, async (req, res) => {
 
         res.send(req.user)
     } catch(e) {
-        console.log(e)
         res.status(500).send()
     }
 })
